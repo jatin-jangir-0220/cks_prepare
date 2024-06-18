@@ -2,15 +2,15 @@
 
 ![4](../images/4.png)
 
-官方文档：https://kubernetes.io/docs/concepts/services-networking/network-policies/
+Official documentation：https://kubernetes.io/docs/concepts/services-networking/network-policies/
 
-## 创建一个网络策略，来限制pod之前相互访问，默认的策略是pod之间，在不同的namespace是可以相互访问的
+## Create a network policy to restrict mutual access between pods. The default policy is that pods can access each other in different namespaces.
 
-### 创建一个默认的deny all ingress
+### Create a default deny all ingress
 
-### 创建一个默认的deny all egress
+### Create a default deny all egress
 
-### 创建一个默认的deny all ingress、egress
+### Create a default deny all ingress, egress
 
 ```yaml
 ---
