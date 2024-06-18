@@ -1,8 +1,6 @@
 # Clusterrole
 
-修改namespace下role的权限只允许对某一类对象做list list的操作
-新建一个serviceaccount (sa02)
-创建名为role02的role，并且通过rolebinding绑定role02，只允许对persistentvolumeclaims做update操作。
+Modify the permissions of the role under the namespace to only allow list operations on certain types of objects. Create a new serviceaccount (sa02). Create a role named role02, and bind role02 through rolebinding. Only update operations on persistent volume claims are allowed.
 
 ```shell
 1. 修改对应的role使用list权限
