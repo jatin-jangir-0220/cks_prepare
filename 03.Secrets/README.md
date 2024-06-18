@@ -2,19 +2,19 @@
 
 ![](../images/3.png)
 
-## 1、导出存在的secret
+## 1、Export existing secret
 ```shell
 kubectl -n istio-system get secrets db1-test -ojsonpath='{.data.user}'|base64 -d > /etc/candidate/user.txt
 
 kubectl -n istio-system get secrets db1-test -ojsonpath='{.data.pass}'|base64 -d > /etc/candidate/pass.txt
 ```
 
-## 2、新建secret
+## 2、Create new secret
 ```
 kubectl create secret generic db2-test --from-literal=user=production-instance --from-literal=pass=password -n istio-system
 ```
 
-## 3、创建pod挂载secret
+## 3、Create a pod mounting secret
 ```yaml
 apiVersion: v1
 kind: Pod
